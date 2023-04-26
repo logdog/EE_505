@@ -13,7 +13,7 @@ y_2 = @(t) y_1(t) + L2*sin(interp1(tout, q1+q2, t, 'spline'));
 % animate
 ax1 = subplot(1,1,1);
 
-args = {"FrameRate", 30, "AnimationRange", [0 25]};
+args = {"FrameRate", 30, "AnimationRange", [0 40]};
 fanimator(ax1, @(t) plot([0 x_1(t)],[0 y_1(t)],'k-','LineWidth',4), args{:}); 
 hold on;
 axis equal square;

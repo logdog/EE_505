@@ -11,17 +11,17 @@ y_pend = @(t) L*cos(interp1(tout, q1, t, 'spline'));
 % animate
 ax1 = subplot(1,1,1);
 
-args = {"FrameRate", 30, "AnimationRange", [0 5]};
+args = {"FrameRate", 30, "AnimationRange", [0 20]};
 fanimator(ax1, ...
     @(t) rectangle('Position',[x_cart(t)-cL/2,-cH/2,cL,cH], ...
     'FaceColor','b'), args{:}); 
 hold on;
-axis equal square;
-xlim([-1.5 1.5]);
+axis equal;
+xlim([-2 1.5]);
 ylim([-1.5 1.5]);
 grid on;
 fanimator(ax1, @(t) plot([x_cart(t) x_pend(t)],[0 y_pend(t)],...
-    'k-','LineWidth',4), args{:}); 
+    'k-','LineWidth',4), args{:});
 fanimator(ax1, @(t) text(-0.3,0.3+L,"Time: "+num2str(t,3)), args{:});
 hold off;
 

@@ -1,3 +1,4 @@
+clear;
 rho_aluminum = 2710; % kg/m^3
 g = 9.81; % m/s^2
 
@@ -11,8 +12,8 @@ Lc2 = L2/2;
 m2 = L2*(0.03)*(0.03)*rho_aluminum; % 30cm x 3cm 3cm
 I2 = 1/3*m2*L2^2;
 
-q1_0 = deg2rad(-10);
-q2_0 = deg2rad(30);
+q1_0 = deg2rad(-100);
+q2_0 = deg2rad(-45);
 
 % LQR
 m11_0 = m1*Lc1^2 + m2*(L1^2 + Lc2^2 + 2*L1*Lc2*cos(0)) + I1 + I2;

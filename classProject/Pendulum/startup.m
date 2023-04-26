@@ -1,3 +1,4 @@
+clear;
 rho_aluminum = 2710; % kg/m^3
 g = 9.81; % m/s^2
 
